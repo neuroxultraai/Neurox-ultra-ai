@@ -1,0 +1,32 @@
+
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Doctor AI — Master of Universe</title>
+<link rel="stylesheet" href="./assets/style.css"></head><body>
+<div class="wrap">
+  <header><h1>Doctor AI — Health Assistant</h1></header>
+  <main>
+    <section class="card">
+      <label for="symptoms">Describe your symptoms</label>
+      <textarea id="symptoms" placeholder="e.g., fever, sore throat, cough for 2 days..."></textarea>
+      <div class="row">
+        <input id="age" type="number" placeholder="Age" />
+        <select id="gender"><option value="">Gender (optional)</option><option>Male</option><option>Female</option><option>Other</option></select>
+      </div>
+      <button id="askBtn" class="button">Ask Doctor</button>
+    </section>
+
+    <section id="result" class="card" style="display:none;">
+      <h3>Result</h3>
+      <div id="triage" class="triage"></div>
+      <pre id="out"></pre>
+      <div class="row">
+        <button id="speakBtn" class="button">Read Aloud</button>
+        <button id="saveBtn" class="button">Save Report (PDF)</button>
+      </div>
+    </section>
+  </main>
+  <footer class="small">Not medical advice. For emergencies call local services.</footer>
+</div>
+<script type="module" src="./app.js"></script>
+</body></html>
